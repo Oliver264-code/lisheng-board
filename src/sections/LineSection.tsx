@@ -11,7 +11,7 @@ export default function LineSection({ rows, mirrorSpend, mirrorLeads }: { rows: 
   const t = aggregateLines(rows)
   const desc = [...rows].reverse()
   return (
-    <section className="rounded-2xl bg-white border border-[#d2d2d7]/60 p-6">
+    <section className="rounded-[18px] bg-white shadow-[0_2px_16px_rgba(0,0,0,.05)] p-6">
       <div className="flex items-baseline justify-between mb-4">
         <h3 className="text-sm font-semibold text-[#1d1d1f]">每日订单与进线分线</h3>
         <span className="text-[11px] text-[#aeaeb2]">按归因证据广告主归属（谁投谁接待）；归因不到计「其他未归因」</span>
@@ -28,10 +28,10 @@ export default function LineSection({ rows, mirrorSpend, mirrorLeads }: { rows: 
           <span className="text-[#aeaeb2]">（对照户·不计预算）</span>
         </span>
       </div>
-      <div className="overflow-x-auto max-h-96 overflow-y-auto rounded-xl border border-[#e8e8ed]">
+      <div className="overflow-x-auto max-h-96 overflow-y-auto rounded-xl">
         <table className="w-full text-sm tabular-nums whitespace-nowrap">
           <thead className="sticky top-0 z-10">
-            <tr className="bg-[#f5f5f7] text-[#86868b] text-xs border-b border-[#e8e8ed]">
+            <tr className="text-[#86868b] text-[11px] tracking-wide border-b border-[#e8e8ed]">
               <th className="px-4 py-2.5 text-left font-medium">日期</th>
               {ORDER_LINES.map((l) => (
                 <th key={l} className="px-4 py-2.5 text-right font-medium">{l}单</th>
@@ -44,7 +44,7 @@ export default function LineSection({ rows, mirrorSpend, mirrorLeads }: { rows: 
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-[#f5f5f7]/70 font-semibold border-b border-[#d2d2d7]">
+            <tr className="font-semibold border-b border-[#d2d2d7]">
               <td className="px-4 py-2.5 text-[#1d1d1f]">区间合计</td>
               {ORDER_LINES.map((l) => (
                 <td key={l} className="px-4 py-2.5 text-right text-[#1d1d1f]">{fmtNum(t[l])}</td>

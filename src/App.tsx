@@ -60,7 +60,7 @@ export default function App() {
         <LineSection rows={lineRows} mirrorSpend={agg.mirrorSpend} mirrorLeads={agg.mirrorLeads} />
         <DailySection rows={rows} />
 
-        <footer className="rounded-2xl bg-white border border-[#d2d2d7]/60 p-6">
+        <footer className="rounded-[18px] bg-white shadow-[0_2px_16px_rgba(0,0,0,.05)] p-6">
           <h3 className="text-sm font-semibold text-[#1d1d1f] mb-2">指标口径</h3>
           <ul className="text-xs text-[#86868b] space-y-1.5 leading-relaxed list-disc pl-4">
             {CALIBERS.map((c) => (

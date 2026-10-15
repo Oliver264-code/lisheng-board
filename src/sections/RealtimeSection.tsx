@@ -10,7 +10,7 @@ export default function RealtimeSection({ realtime }: { realtime: Realtime }) {
     { label: '订单成本', value: fmtMoney(realtime.total_order_cost) },
   ]
   return (
-    <section className="rounded-2xl bg-white border border-[#d2d2d7]/60 p-6">
+    <section className="rounded-[18px] bg-white shadow-[0_2px_16px_rgba(0,0,0,.05)] p-6">
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-5">
         <h2 className="flex items-center gap-2 text-base font-semibold text-[#1d1d1f]">
           <span className="inline-block w-2 h-2 rounded-full bg-[#0071e3]" />
@@ -27,10 +27,10 @@ export default function RealtimeSection({ realtime }: { realtime: Realtime }) {
           </div>
         ))}
       </div>
-      <div className="overflow-x-auto rounded-xl border border-[#e8e8ed]">
+      <div className="overflow-x-auto rounded-xl">
         <table className="w-full text-sm tabular-nums">
           <thead>
-            <tr className="bg-[#f5f5f7] text-[#86868b] text-xs">
+            <tr className="text-[#86868b] text-[11px] tracking-wide">
               <th className="px-4 py-2.5 text-left font-medium">条线</th>
               <th className="px-4 py-2.5 text-right font-medium">今日实时消耗</th>
               <th className="px-4 py-2.5 text-right font-medium">新进线数</th>
@@ -55,7 +55,7 @@ export default function RealtimeSection({ realtime }: { realtime: Realtime }) {
                 <td className="px-4 py-2.5 text-right text-[#6e6e73]">{fmtMoney(r.order_cost)}</td>
               </tr>
             ))}
-            <tr className="border-t border-[#d2d2d7] bg-[#f5f5f7]/60 font-semibold">
+            <tr className="border-t border-[#d2d2d7] font-semibold">
               <td className="px-4 py-2.5 text-[#1d1d1f]">总计</td>
               <td className="px-4 py-2.5 text-right text-[#1d1d1f]">{fmtMoney(realtime.total_spend)}</td>
               <td className="px-4 py-2.5 text-right text-[#1d1d1f]">{fmtNum(realtime.total_leads)}</td>

@@ -13,7 +13,7 @@ interface Props {
 export default function PublishSection({ rows, accounts, totals, materialTotal, biliTotal, contentTotal }: Props) {
   const desc = [...rows].reverse()
   return (
-    <section className="rounded-2xl bg-white border border-[#d2d2d7]/60 p-6">
+    <section className="rounded-[18px] bg-white shadow-[0_2px_16px_rgba(0,0,0,.05)] p-6">
       <div className="flex items-baseline justify-between mb-4">
         <h3 className="text-sm font-semibold text-[#1d1d1f]">每日发布篇数</h3>
         <span className="text-[11px] text-[#aeaeb2]">分账号 + 广告素材/B站单列，不合并；排期不计</span>
@@ -31,10 +31,10 @@ export default function PublishSection({ rows, accounts, totals, materialTotal, 
           B站 <b className="text-[#1d1d1f] font-semibold">{fmtNum(biliTotal)}</b>
         </span>
       </div>
-      <div className="overflow-x-auto max-h-96 overflow-y-auto rounded-xl border border-[#e8e8ed]">
+      <div className="overflow-x-auto max-h-96 overflow-y-auto rounded-xl">
         <table className="w-full text-sm tabular-nums whitespace-nowrap">
           <thead className="sticky top-0 z-10">
-            <tr className="bg-[#f5f5f7] text-[#86868b] text-xs border-b border-[#e8e8ed]">
+            <tr className="text-[#86868b] text-[11px] tracking-wide border-b border-[#e8e8ed]">
               <th className="px-4 py-2.5 text-left font-medium">日期</th>
               {accounts.map((a) => (
                 <th key={a} className="px-4 py-2.5 text-right font-medium">{a}</th>
@@ -46,7 +46,7 @@ export default function PublishSection({ rows, accounts, totals, materialTotal, 
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-[#f5f5f7]/70 font-semibold border-b border-[#d2d2d7]">
+            <tr className="font-semibold border-b border-[#d2d2d7]">
               <td className="px-4 py-2.5 text-[#1d1d1f]">区间合计</td>
               {accounts.map((a) => (
                 <td key={a} className="px-4 py-2.5 text-right text-[#1d1d1f]">{fmtNum(totals[a] ?? 0)}</td>

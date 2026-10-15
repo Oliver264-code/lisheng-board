@@ -24,7 +24,7 @@ export default function KpiSection({ agg, budget, isAll }: Props) {
   return (
     <section className="space-y-3">
       {/* 资金总览 */}
-      <div className="rounded-2xl bg-white border border-[#d2d2d7]/60 px-6 py-6 sm:px-8">
+      <div className="rounded-[18px] bg-white shadow-[0_2px_16px_rgba(0,0,0,.05)] px-6 py-6 sm:px-8">
         <div className="flex flex-wrap items-end gap-x-12 gap-y-5">
           <div>
             <div className="text-xs text-[#86868b] mb-1.5">广告费总预算</div>
@@ -56,7 +56,7 @@ export default function KpiSection({ agg, budget, isAll }: Props) {
       {/* KPI 卡片 */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
         {cards.map((c) => (
-          <div key={c.label} className="rounded-2xl bg-white border border-[#d2d2d7]/60 px-5 py-4">
+          <div key={c.label} className="rounded-[18px] bg-white shadow-[0_2px_16px_rgba(0,0,0,.05)] px-5 py-4">
             <div className="text-xs text-[#86868b]">{c.label}</div>
             <div className="text-[26px] leading-tight font-semibold tabular-nums text-[#1d1d1f] mt-1.5 tracking-tight">{c.value}</div>
             <div className="text-[11px] text-[#aeaeb2] mt-1 leading-tight">{c.sub}</div>
