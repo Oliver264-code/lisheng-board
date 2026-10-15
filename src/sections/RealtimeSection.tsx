@@ -17,7 +17,7 @@ export default function RealtimeSection({ realtime }: { realtime: Realtime }) {
           今日实时成本
           <span className="text-xs font-normal text-[#86868b]">{realtime.date} 当日累计 · 不受日期筛选影响</span>
         </h2>
-        <span className="text-[11px] text-[#aeaeb2]">更新 {realtime.updated} · 每天 10:00 / 15:00 / 18:00 / 21:00 刷新</span>
+        <span className="text-[11px] text-[#aeaeb2]">更新 {realtime.updated} · 每天 10:00 / 15:00 / 18:00 / 21:00 刷新{realtime.note ? ` · ${realtime.note}` : ''}</span>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-5">
         {kpis.map((k) => (

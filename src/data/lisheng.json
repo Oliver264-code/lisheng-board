@@ -43,8 +43,7 @@
   "满格镜像": 9,
   "营业厅": 1,
   "丽胜": 0,
-  "丽胜自有投放": 3,
-  "B站": 19,
+  "B站": 22,
   "其他未归因": 15
  },
  "line_rows": [
@@ -342,9 +341,9 @@
    "满格": 3,
    "营业厅": 1,
    "丽胜": 0,
-   "B站": 8,
+   "B站": 9,
    "满格镜像": 0,
-   "丽胜自有投放": 1,
+   "丽胜自有投放": 0,
    "其他未归因": 0,
    "pushed": 12,
    "leads_满格": 11,
@@ -444,9 +443,9 @@
    "满格": 2,
    "营业厅": 0,
    "丽胜": 0,
-   "B站": 0,
+   "B站": 2,
    "满格镜像": 1,
-   "丽胜自有投放": 2,
+   "丽胜自有投放": 0,
    "其他未归因": 1,
    "pushed": 6,
    "leads_满格": 10,
@@ -1323,12 +1322,12 @@
  ],
  "realtime": {
   "date": "2026-10-15",
-  "updated": "2026-10-15 20:26",
-  "total_spend": 803.24,
-  "total_leads": 12,
+  "updated": "2026-10-15 22:20",
+  "total_spend": 1589.54,
+  "total_leads": 16,
   "total_orders": 10,
-  "total_lead_cost": 66.94,
-  "total_order_cost": 80.32,
+  "total_lead_cost": 99.35,
+  "total_order_cost": 158.95,
   "rows": [
    {
     "line": "满格",
@@ -1356,11 +1355,11 @@
    },
    {
     "line": "B站",
-    "spend": 19.91,
-    "leads": 0,
-    "lead_cost": null,
+    "spend": 806.21,
+    "leads": 4,
+    "lead_cost": 201.55,
     "orders": 4,
-    "order_cost": 4.98
+    "order_cost": 201.55
    },
    {
     "line": "满格(镜像)",
@@ -1371,14 +1370,6 @@
     "order_cost": null
    },
    {
-    "line": "丽胜自有投放",
-    "spend": null,
-    "leads": 0,
-    "lead_cost": null,
-    "orders": 0,
-    "order_cost": null
-   },
-   {
     "line": "未归因",
     "spend": null,
     "leads": 0,
@@ -1386,6 +1377,7 @@
     "orders": 1,
     "order_cost": null
    }
-  ]
+  ],
+  "note": "B站线为 fullbar 实时三户合计（4221900+4505906+4505909）；其余线为 20:26 快照"
  }
 }

@@ -1,7 +1,7 @@
 import type { LineRow } from '@/types/lisheng'
 import { aggregateLines, fmtMoney, fmtNum, LINE_COLORS } from '@/lib/metrics'
 
-const ORDER_LINES = ['满格', '满格镜像', '营业厅', '丽胜', '丽胜自有投放', 'B站', '其他未归因'] as const
+const ORDER_LINES = ['满格', '满格镜像', '营业厅', '丽胜', 'B站', '其他未归因'] as const
 const LEAD_LINES = ['leads_满格', 'leads_营业厅', 'leads_丽胜', 'leads_B站', 'leads_镜像'] as const
 const LEAD_LABELS: Record<string, string> = {
   leads_满格: '满格进线', leads_营业厅: '营业厅进线', leads_丽胜: '丽胜进线', leads_B站: 'B站线索', leads_镜像: '镜像进线',

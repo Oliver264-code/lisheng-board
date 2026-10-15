@@ -60,6 +60,7 @@ export interface RealtimeRow {
 export interface Realtime {
   date: string
   updated: string
+  note?: string
   total_spend: number
   total_leads: number
   total_orders: number
