@@ -6,13 +6,13 @@ export interface Range {
 }
 
 export const LINE_COLORS: Record<string, string> = {
-  满格: '#2563eb',
-  营业厅: '#f59e0b',
-  丽胜: '#10b981',
-  B站: '#8b5cf6',
-  满格镜像: '#94a3b8',
-  丽胜自有投放: '#06b6d4',
-  其他未归因: '#d4d4d8',
+  满格: '#0071e3',
+  营业厅: '#6e6e73',
+  丽胜: '#aeaeb2',
+  B站: '#d2d2d7',
+  满格镜像: '#8e8e93',
+  丽胜自有投放: '#c7c7cc',
+  其他未归因: '#e5e5ea',
 }
 
 export const fmtMoney = (v: number | null | undefined) =>

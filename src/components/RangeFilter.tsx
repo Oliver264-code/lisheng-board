@@ -23,7 +23,7 @@ export default function RangeFilter({ range, onChange, minDate, maxDate }: Props
   const is14 = range.start === shift(maxDate, -13) && !range.end
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-sm font-medium text-slate-500 mr-1">日期筛选</span>
+      <span className="text-xs font-medium text-[#86868b] mr-1">日期筛选</span>
       <Button size="sm" variant={isAll ? 'default' : 'outline'} onClick={() => onChange({ start: null, end: null })}>
         全部
       </Button>
@@ -36,16 +36,16 @@ export default function RangeFilter({ range, onChange, minDate, maxDate }: Props
       <div className="flex items-center gap-1.5 ml-2">
         <input
           type="date"
-          className="h-8 rounded-md border border-input bg-white px-2 text-sm"
+          className="h-8 rounded-full border border-[#d2d2d7] bg-white px-3 text-xs text-[#1d1d1f]"
           min={minDate}
           max={maxDate}
           value={range.start ?? minDate}
           onChange={(e) => onChange({ ...range, start: e.target.value || null })}
         />
-        <span className="text-slate-400 text-sm">至</span>
+        <span className="text-[#aeaeb2] text-xs">至</span>
         <input
           type="date"
-          className="h-8 rounded-md border border-input bg-white px-2 text-sm"
+          className="h-8 rounded-full border border-[#d2d2d7] bg-white px-3 text-xs text-[#1d1d1f]"
           min={minDate}
           max={maxDate}
           value={range.end ?? maxDate}

@@ -32,22 +32,19 @@ export default function App() {
   const isAll = !range.start && !range.end
 
   return (
-    <div className="min-h-screen bg-[#f4f6f9] text-slate-900">
-      <header className="sticky top-0 z-30 bg-white/85 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_8px_rgba(15,23,42,.04)]">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-blue-200">丽</div>
-            <div>
-              <h1 className="text-lg font-bold tracking-tight leading-tight">丽胜代运营数据看板</h1>
-              <p className="text-[11px] text-slate-400 leading-tight">
-                更新 {data.updated}（每天 9:00 同步，T+1）· 数据截至 {data.data_through}
-              </p>
-            </div>
+    <div className="min-h-screen bg-[#f5f5f7] text-[#1d1d1f]">
+      <header className="sticky top-0 z-30 bg-[#f5f5f7]/80 backdrop-blur-xl border-b border-[#d2d2d7]/50">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h1 className="text-xl font-semibold tracking-tight leading-tight">丽胜代运营数据看板</h1>
+            <p className="text-[11px] text-[#86868b] leading-tight mt-0.5">
+              更新 {data.updated}（每天 9:00 同步，T+1）· 数据截至 {data.data_through}
+            </p>
           </div>
           <RangeFilter range={range} onChange={setRange} minDate={data.start} maxDate={data.data_through} />
         </div>
       </header>
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-6 space-y-5">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-8 space-y-4">
 
         <RealtimeSection realtime={data.realtime} />
         <KpiSection agg={agg} budget={data.budget} isAll={isAll} />
@@ -63,9 +60,9 @@ export default function App() {
         <LineSection rows={lineRows} mirrorSpend={agg.mirrorSpend} mirrorLeads={agg.mirrorLeads} />
         <DailySection rows={rows} />
 
-        <footer className="rounded-2xl border bg-white p-5 shadow-sm">
-          <h3 className="text-sm font-semibold text-slate-800 mb-2">指标口径</h3>
-          <ul className="text-xs text-slate-500 space-y-1.5 leading-relaxed list-disc pl-4">
+        <footer className="rounded-2xl bg-white border border-[#d2d2d7]/60 p-6">
+          <h3 className="text-sm font-semibold text-[#1d1d1f] mb-2">指标口径</h3>
+          <ul className="text-xs text-[#86868b] space-y-1.5 leading-relaxed list-disc pl-4">
             {CALIBERS.map((c) => (
               <li key={c.slice(0, 12)}>{c}</li>
             ))}
